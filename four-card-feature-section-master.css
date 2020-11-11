@@ -1,0 +1,143 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif
+}
+body{
+	font-size: 15px;
+	background-color: hsl(0, 0%, 98%);
+}
+.head{
+	width: auto;
+	text-align: center;
+	color: hsl(234, 12%, 34%);
+	font-size: 15px;
+	margin: 0 auto;
+	padding: 4rem 1.2rem 1rem;
+	line-height: 1.6;
+}
+.head .light-header{
+	font-weight: 200;
+}
+.bold-header{
+	font-weight: 600;
+}
+.sub-header{
+	font-weight: 600px;
+}
+
+/* card section*/
+.container{
+	display: grid;
+	margin-top: 1rem;
+	padding: 2rem 2rem;
+	grid-auto-rows: minmax(12.5rem, auto)
+	grid-template-columns: 1fr;
+	grid-gap: 2rem;
+	justify-items: center;
+}
+.card {
+	height: 20rem;
+	max-width: 30rem;
+	border-radius: 5px;	
+	background-color: hsl(0, 0%, 100%);
+	padding: 2rem;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3); 
+}
+.card-head{
+	text-align: left;
+	margin-left: 10px;
+}
+.card-content{
+	text-align: left;
+	width: 220px;
+	margin-left: 10px;
+	line-height: 1.5;
+}
+.supervisor{
+	border-top: solid 5px hsl(180, 62%, 55%);
+}
+.builder{
+	border-top: solid 5px hsl(0, 78%, 63%);
+}
+.karma{
+	border-top: solid 5px hsl(34, 97%, 64%);
+}
+.calculator{
+	border-top: solid 5px hsl(212, 86%, 64%);
+}
+.supervisor,
+.calculator{
+	align-self: center;
+}
+.card-img{
+	text-align: right;
+	margin-top: 15px;
+	padding-top: 15px;
+}
+@media only screen and (min-width: 768px){
+	.head{
+		max-width: 30rem;
+		margin: 0 auto;
+	}
+	.container{
+		margin-top: 1rem;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-auto-rows: minmax(8rem,auto);
+		grid-column-gap: 2rem;
+		grid-row-gap: 2.5rem;
+		justify-items: center;
+	}
+}
+@media only screen and (min-width: 992px){
+	.head{
+		max-width: 32rem;
+		margin: 0 auto;
+		padding: 5rem 1.2rem 1rem;
+		line-height: 1.6;
+		text-align: center;
+	}
+	h1{
+		font-size: 2rem;
+	}
+	.container{
+		margin-top: 1rem;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		grid-template-areas: 'supervisor builder calculator' 'supervisor karma calculator';
+		grid-gap: 2rem;
+	}
+	.card{
+		padding: 1.9rem;
+	}
+	.supervisor{
+		grid-area: supervisor;
+	}
+	.builder{
+		grid-area: builder;
+	}
+	.karma{
+		grid-area: karma;
+	}	
+	.calculator{
+		grid-area: calculator;
+	}
+}
+@media only screen and (min-width: 1200px){
+	.card-container {
+        margin-top: 1rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 'supervisor builder calculator' 'supervisor karma calculator';
+        grid-gap: 2rem;
+        max-width: 77rem;
+    }
+    .card{
+    	max-width: 23rem;
+    	padding: 1.9rem;
+    }
+}
