@@ -32,7 +32,7 @@ body{
 	display: grid;
 	margin-top: 1rem;
 	padding: 2rem 2rem;
-	grid-auto-rows: minmax(12.5rem, auto)
+	grid-auto-rows: minmax(12.5rem, auto);
 	grid-template-columns: 1fr;
 	grid-gap: 2rem;
 	justify-items: center;
